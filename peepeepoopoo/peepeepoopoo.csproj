@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Models\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Settings\Database\" />
+    <Folder Include="Models\Response\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\Pets\" />
+    <Folder Include="Models\Battles\" />
+    <Folder Include="Models\Achievements\" />
+    <Folder Include="Models\Shop\" />
+    <Folder Include="Models\Chat\" />
+    <Folder Include="Interfaces\Shop\" />
+    <Folder Include="Models\Player\" />
+    <Folder Include="Models\Pets\Creatures\" />
+    <Folder Include="Services\Shop\" />
+    <Folder Include="Services\Battles\" />
+    <Folder Include="Services\Players\" />
+    <Folder Include="Services\Pets\" />
+    <Folder Include="Services\Achievements\" />
+    <Folder Include="Models\Pets\Attacks\" />
+    <Folder Include="Interfaces\Battles\" />
+    <Folder Include="Models\Currency\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Interfaces\Pets\" />
+    <Folder Include="Constants\Shop\" />
+    <Folder Include="Constants\Creatures\" />
+    <Folder Include="Constants\Creatures\Attacks\" />
+    <Folder Include="Interfaces\Pets\Creatures\" />
+    <Folder Include="Models\Pets\Food\" />
+    <Folder Include="Constants\Creatures\Food\" />
+    <Folder Include="Models\Friends\" />
+    <Folder Include="Services\Friends\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Services\Currency\" />
+    <Folder Include="Handlers\Achievements\" />
+    <Folder Include="Models\Statistics\" />
+    <Folder Include="Interfaces\Statistics\" />
+    <Folder Include="Interfaces\Currency\" />
+    <Folder Include="Mocked\" />
+    <Folder Include="Controllers\Mocked\" />
+    <Folder Include="Mocked\Constants\" />
+    <Folder Include="Interfaces\Players\" />
+    <Folder Include="Constants\Achievements\" />
+    <Folder Include="Interfaces\Achievements\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+    <PackageReference Include="codecracker.CSharp" Version="1.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\Shop\Item.cs" />
+  </ItemGroup>
+</Project>
