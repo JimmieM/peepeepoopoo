@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using peepeepoopoo.Models.Achievements;
+using peepeepoopoo.Models.Pets;
 using peepeepoopoo.Models.Player;
 
 namespace peepeepoopoo.Interfaces.Players
@@ -12,5 +14,8 @@ namespace peepeepoopoo.Interfaces.Players
         Level EarnExperience(int amount);
         Player GetProfile(int userId);
         Player GetProfile(string username);
+        List<Achievement> GetMyAchievements();
+        List<Pet> GetMyPets();
+
     }
 }

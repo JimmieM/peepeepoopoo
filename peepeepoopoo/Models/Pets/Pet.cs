@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using peepeepoopoo.Models.Statistics;
 
@@ -14,11 +13,11 @@ namespace peepeepoopoo.Models.Pets
 
         public Creature Creature;
 
-        public readonly List<Creatures.CreatureAttack> Attacks;
+        public List<Creatures.CreatureAttack> Attacks;
 
         public string Name;
 
-        public bool Dead;
+        public bool Dead; 
 
         public Battles.Battle Battle;
 
@@ -46,17 +45,6 @@ namespace peepeepoopoo.Models.Pets
             return false;
         }
 
-        public bool AddAttack(Creatures.CreatureAttack attack)
-        {
-            var exist = Attacks.First(findAttack => findAttack.Id.Equals(attack.Id));
-            if(exist == null)
-            {
-                Attacks.Add(attack);
-                return true;
-            }
-            return false;
-        }
-
         public static Pet ConcreteStarterPet(Creature creature)
         {
             return CreatePet(creature, "");
@@ -69,17 +57,15 @@ namespace peepeepoopoo.Models.Pets
 
         private static Pet CreatePet(Creature creature, string name)
         {
-            var pet = new Pet
-            {
-                Creature = creature,
-                Agility = new Agility(50),
-                Energy = new Energy(50),
-                Health = new Health(100),
-                Happiness = new Happiness(75),
-                LastUpdate = DateTime.Now,
-                Strength = new Strength(50),
-                Name = name
-            };
+            Pet pet = new Pet();
+            pet.Creature = creature;
+            pet.Agility = new Agility(50);
+            pet.Energy = new Energy(50);
+            pet.Health = new Health(100);
+            pet.Happiness = new Happiness(75);
+            pet.LastUpdate = DateTime.Now;
+            pet.Strength = new Strength(50);
+            pet.Name = name;
             return pet;
         }
 

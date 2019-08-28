@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using peepeepoopoo.Interfaces.Pets.Creatures;
 using peepeepoopoo.Models.Pets;
 using peepeepoopoo.Models.Pets.Creatures;
 

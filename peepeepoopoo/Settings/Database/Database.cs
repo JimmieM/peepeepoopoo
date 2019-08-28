@@ -1,23 +1,26 @@
 ﻿using System;
-using System.Data.SqlClient;
 
 namespace peepeepoopoo.Settings.Database
 {
     public class Database
     {
-        public Database()
+        public string DATABASE_NAME = "peepeepoopoo";
+        public string PASSWORD = "root";
+        public string UID = "root";
+
+        virtual public bool Connect()
         {
+            throw new NotImplementedException("Connect is not implemented!");
         }
 
-        public SqlConnectionStringBuilder GetConnection()
+        virtual public void Close()
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "anonyflow.database.windows.net";
-            builder.UserID = "";
-            builder.Password = "";
-            builder.InitialCatalog = "anonyflow";
+            throw new NotImplementedException("Close is not implemented!");
+        }
 
-            return builder;
+        virtual public object Query(string query)
+        {
+            throw new NotImplementedException("Query is not implemented!");
         }
     }
 }

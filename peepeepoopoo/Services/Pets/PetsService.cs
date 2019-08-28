@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using peepeepoopoo.Interfaces.Pets;
 using peepeepoopoo.Interfaces.Statistics;
+using peepeepoopoo.Mocked.Constants;
 using peepeepoopoo.Models.Pets;
 using peepeepoopoo.Models.Pets.Creatures;
 using peepeepoopoo.Models.Player;
@@ -19,20 +20,15 @@ namespace peepeepoopoo.Services.Pets
          * PUBLIC
          */
 
-        public void GetPets(Player player)
-        {
-            var pets = new List<Pet>();
-            pets.Add(new Pet());
-            pets.Add(new Pet());
-
-            pets.ForEach(pet => GetPet(pet.Id));
-        }
-
-        public void GetPet(int id)
+        public List<Pet> GetMyPets()
         {
 
-        }
+            var pet1 = MockedPet.Create();
+            var pet2 = MockedPet.Create();
+            var pet3 = MockedPet.Create();
 
+            return new List<Pet> { pet1, pet2, pet3 };
+        }
         /*
          * PRIVATE 
          */
@@ -44,6 +40,11 @@ namespace peepeepoopoo.Services.Pets
         private int MinutesSinceLastFed(Pet pet)
         {
             return 30;
+        }
+
+        public Pet GetPet(int petId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

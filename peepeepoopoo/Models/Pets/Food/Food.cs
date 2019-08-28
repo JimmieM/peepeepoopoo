@@ -9,8 +9,7 @@ namespace peepeepoopoo.Models.Pets.Food
         /*
          * IShopItem Implementation
          */
-        int IShopItem.ShopItemId { get; set; }
-        ICurrency IShopItem.Price { get; set; }
+        public int ShopItemId => throw new NotImplementedException();
 
         /*
          * Food Implementation

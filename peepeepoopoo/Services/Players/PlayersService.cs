@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using peepeepoopoo.Interfaces.Players;
+using peepeepoopoo.Models.Achievements;
+using peepeepoopoo.Models.Pets;
 using peepeepoopoo.Models.Player;
 
 namespace peepeepoopoo.Services.Players
@@ -14,13 +16,22 @@ namespace peepeepoopoo.Services.Players
         /*
         * PUBLIC
         */
-
         public Level EarnExperience(int amount)
         {
             throw new NotImplementedException();
         }
 
         public List<Player> GetAllPlayers(int range)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Achievement> GetMyAchievements()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Pet> GetMyPets()
         {
             throw new NotImplementedException();
         }
@@ -48,7 +59,6 @@ namespace peepeepoopoo.Services.Players
         /*
         * PRIVATE
         */
-
         private void GetEarnedAchievements()
         {
         }

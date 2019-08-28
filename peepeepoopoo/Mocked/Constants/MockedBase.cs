@@ -1,7 +1,9 @@
 ﻿using System;
+using peepeepoopoo.Interfaces;
+
 namespace peepeepoopoo.Mocked.Constants
 {
-    public class MockedBase
+    public abstract class MockedBase
     {
         public MockedBase()
         {

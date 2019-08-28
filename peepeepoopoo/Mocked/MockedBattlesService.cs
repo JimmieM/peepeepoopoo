@@ -7,12 +7,12 @@ using peepeepoopoo.Models.Pets;
 
 namespace peepeepoopoo.Mocked
 {
-    public class MockedBattlesService : IBattlesService
+    public class MockedBattlesService : MockedBaseService, IBattlesService
     {
 
         public List<Battle> MockedBattles;
 
-        public MockedBattlesService()
+        public MockedBattlesService(int userId) : base(userId)
         {
             FillMockedBattles();
         }

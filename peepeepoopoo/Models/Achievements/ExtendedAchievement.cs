@@ -6,42 +6,33 @@ using peepeepoopoo.Models.Battles;
 namespace peepeepoopoo.Models.Achievements
 {
     /// <summary>
-    /// Holds an achievement with its rules etc.
+    /// Holds an achievement with its rules etc
     /// </summary>
-    public class ExtendedAchievement : IBaseAchievement
+    public class ExtendedAchievement : Achievement
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int Value { get; set; }
-
         public List<Reward> Rewards;
         public List<AchievementRequirement> AchievementRequirements;
 
+        /// <summary>
+        /// Holds the treeroot value
+        /// </summary>
         public string TreeRoot;
+
+        /// <summary>
+        /// Holds the subroot
+        /// </summary>
         public string SubRoot;
 
-        public void Base(Achievement achievement)
-        {
-            Id = achievement.Id;
-            Name = achievement.Name;
-            Description = achievement.Description;
-            Value = achievement.Value;
-        }
 
-        public ExtendedAchievement(Achievement achievement) 
-        {
-            Base(achievement);
-        }
+        public ExtendedAchievement(Achievement achievement) : base(achievement.Id, achievement.Name, achievement.Description, achievement.Value) { }
 
         public ExtendedAchievement(
             Achievement achievement,
             List<Reward> rewards,
             List<AchievementRequirement> achievementRequirements,
             string treeRoot,
-            string subRoot)
+            string subRoot) : base(achievement.Id, achievement.Name, achievement.Description, achievement.Value)
         {
-            Base(achievement);
             Rewards = rewards;
             AchievementRequirements = achievementRequirements;
             TreeRoot = treeRoot;

@@ -1,4 +1,6 @@
-﻿using peepeepoopoo.Constants.Creatures.Food;
+﻿using peepeepoopoo.Interfaces.Shop;
+using peepeepoopoo.Constants.Shop;
+using peepeepoopoo.Constants.Creatures.Food;
 using peepeepoopoo.Interfaces.Pets.Creatures;
 using System.Collections.Generic;
 
@@ -12,8 +14,7 @@ namespace peepeepoopoo.Models.Pets.Creatures
 
         public Bird() 
         {
-            ShopItemId = 1;
-            Price = new Currency.Currency(200);
+            
         }
     }
 }

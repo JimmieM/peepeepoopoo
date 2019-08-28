@@ -13,9 +13,7 @@ namespace peepeepoopoo.Models.Pets
         {
         }
 
-        public int ShopItemId { get; set; }
-
-        public ICurrency Price { get; set; }
+        public int ShopItemId => 10;
 
 
         //public List<CreatureAttack> GetAvailableAttacks(Creature creature)

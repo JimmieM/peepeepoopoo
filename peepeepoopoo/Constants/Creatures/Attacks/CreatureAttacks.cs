@@ -10,7 +10,7 @@ namespace peepeepoopoo.Constants.Creatures.Attacks
           return new List<CreatureAttack>
           {
               new CreatureAttack(1, "Bite", "", new Models.Currency.Currency(10), true, 10, 10, "", 1, "",
-                new List<Models.Pets.Creature> { new Bird() }),
+              new List<Models.Pets.Creature> { new Bird() }),
 
               new CreatureAttack(2, "Swirl", "", new Models.Currency.Currency(10), true, 10, 10, "", 1, "",
               new List<Models.Pets.Creature> { new Bird() }),

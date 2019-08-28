@@ -1,21 +1,17 @@
 ﻿using System;
-using peepeepoopoo.Interfaces.Achievements;
 using peepeepoopoo.Interfaces.Currency;
 
 namespace peepeepoopoo.Models.Achievements
 {
-    public class Achievement : ICurrency, IBaseAchievement
+    public class Achievement : ICurrency
     {
-        /*
-        * IBaseAchievement Implementation 
-        */
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int Value { get; set; }
+        public int Id;
+        public string Name;
+        public string Description;
+        public int Value;
 
-        public DateTime DateEarned;
         public bool Earned;
+        public DateTime DateEarned;
 
         public Achievement(int id, string name, string desc, int value, bool earned, DateTime dateEarned)
         {
@@ -26,7 +22,6 @@ namespace peepeepoopoo.Models.Achievements
             DateEarned = dateEarned;
             Earned = earned;
         }
-
         public Achievement(int id, string name, string desc, int value)
         {
             Id = id;

@@ -6,23 +6,23 @@ using peepeepoopoo.Models.Pets;
 
 namespace peepeepoopoo.Services.Battles
 {
-    public class BattlesService : IBattlesService
+    public class BattlesService : Service, IBattlesService
     {
-        public BattlesService()
+        public BattlesService(int userId) : base(userId)
         {
         }
 
-        public Battle CreateBattle(Pet pet1, Pet pet2, int duration, Pet winnerPet)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Battle EnterBattle(Pet pet, int id)
+        Battle IBattlesService.CreateBattle(Pet pet1, Pet pet2, int duration, Pet winnerPet)
         {
             throw new NotImplementedException();
         }
 
-        public List<Battle> GetAvailableBattles()
+        Battle IBattlesService.EnterBattle(Pet pet, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Battle> IBattlesService.GetAvailableBattles()
         {
             throw new NotImplementedException();
         }

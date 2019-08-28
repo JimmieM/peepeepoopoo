@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using peepeepoopoo.Interfaces.Currency;
 using peepeepoopoo.Interfaces.Shop;
 
 namespace peepeepoopoo.Models.Pets.Creatures { 
@@ -7,9 +6,8 @@ namespace peepeepoopoo.Models.Pets.Creatures {
     {
         /*
          * IShopItem Implementation
-         */
-        int IShopItem.ShopItemId { get; set; }
-        ICurrency IShopItem.Price { get; set; }
+        */
+        public int ShopItemId => 210;
 
         public int Id;
         public string Name;

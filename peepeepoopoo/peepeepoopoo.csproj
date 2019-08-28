@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Models\Models\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Handlers\" />
@@ -53,17 +52,19 @@
     <Folder Include="Controllers\Mocked\" />
     <Folder Include="Mocked\Constants\" />
     <Folder Include="Interfaces\Players\" />
-    <Folder Include="Constants\Achievements\" />
-    <Folder Include="Interfaces\Achievements\" />
+    <Folder Include="Controllers\Mocked\Shop\" />
+    <Folder Include="Controllers\Mocked\Players\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
-    <PackageReference Include="codecracker.CSharp" Version="1.1.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="MySql.Data" Version="8.0.17" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\Shop\Item.cs" />
+    <Compile Remove="Interfaces\IBaseModel.cs" />
+    <Compile Remove="Mocked\Constants\MockedPlayer %28Konfliktkopia för JimmieKnowit.local 2019-08-28%29.cs" />
+    <Compile Remove="Mocked\Constants\MockedPlayer %28Konfliktkopia för JimmieKnowit.local 2019-08-28%29.cs" />
+    <Compile Remove="Models\Achievements\Achievement %28Konfliktkopia för Jimmies-MacBook-Pro.local 2019-08-20%29.cs" />
+    <Compile Remove="Mocked\Constants\MockedPlayer %28Konfliktkopia för JimmieKnowit.local 2019-08-28%29.cs" />
   </ItemGroup>
 </Project>

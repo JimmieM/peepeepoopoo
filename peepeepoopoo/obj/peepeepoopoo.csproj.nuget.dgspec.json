@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/fsociety/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj": {}
+    "/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj": {}
   },
   "projects": {
-    "/Users/fsociety/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj": {
+    "/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fsociety/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj",
+        "projectUniqueName": "/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj",
         "projectName": "peepeepoopoo",
-        "projectPath": "/Users/fsociety/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj",
-        "packagesPath": "/Users/fsociety/.nuget/packages/",
-        "outputPath": "/Users/fsociety/Dropbox/Appar/peepeepoopoo/peepeepoopoo/obj/",
+        "projectPath": "/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/peepeepoopoo/peepeepoopoo.csproj",
+        "packagesPath": "/Users/jimmiemagnusson/.nuget/packages/",
+        "outputPath": "/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/peepeepoopoo/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/fsociety/.config/NuGet/NuGet.Config"
+          "/Users/jimmiemagnusson/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -43,18 +43,16 @@
               "include": "None",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview7-27912-14, )",
+              "version": "[3.0.0-preview6-27804-01, )",
               "autoReferenced": true
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.17, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.6.1, )"
-            },
-            "codecracker.CSharp": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.1.0, )"
             }
           },
           "imports": [

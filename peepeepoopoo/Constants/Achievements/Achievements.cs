@@ -16,7 +16,10 @@ namespace peepeepoopoo.Constants.Achievements
 
         public static List<Achievement> GetAllAchievements()
         {
-            return new List<Achievement>();
+            var achievements = new List<Achievement>();
+            achievements.Add(new Achievement(1, "Getting Started", "Win a PvP Battle", 10));
+            achievements.Add(new Achievement(2, "That wasn't hard!", "Win a PvE Battle", 10));
+            return achievements;
         }
     }
 }

@@ -7,6 +7,12 @@ namespace peepeepoopoo.Models.Player
         public int CurrentExperience;
         public int ExperienceRange;
 
+
+        public static Level ConcreteStarterLevel()
+        {
+            return new Level(0, 200, 2000);
+        }
+
         public Level(int currentLevel, int currentExperience, int experienceRange)
         {
             CurrentLevel = currentLevel;

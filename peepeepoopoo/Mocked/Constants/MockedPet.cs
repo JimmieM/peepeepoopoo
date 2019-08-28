@@ -31,10 +31,7 @@ namespace peepeepoopoo.Mocked.Constants
 
             var maxValue = GenerateId(10);
 
-            for(var i = 1; i <= maxValue; i++)
-            {
-                generatedAttacks.Add(constantAttacks[i]);
-            }
+            for(var i = 1; i <= maxValue; i++) generatedAttacks.Add(constantAttacks[i]);
 
             return generatedAttacks;
         }
@@ -42,7 +39,6 @@ namespace peepeepoopoo.Mocked.Constants
        /*
         * PRIVATE
         */
-
         private static Pet GeneratePet(Player owner)
         {
             var id = GenerateId();
@@ -56,9 +52,7 @@ namespace peepeepoopoo.Mocked.Constants
             if (owner != null)
                 pet.Player1 = owner;
 
-            pet.AddAttack(attacks[id]);
-            pet.AddAttack(attacks[++id]);
-            pet.AddAttack(attacks[++id]);
+            pet.Attacks = attacks;
             return pet;
         }
 

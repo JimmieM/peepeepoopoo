@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using peepeepoopoo.Interfaces;
 using peepeepoopoo.Models.Achievements;
 using peepeepoopoo.Models.Battles;
 using peepeepoopoo.Models.Currency;

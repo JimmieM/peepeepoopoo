@@ -1,28 +1,26 @@
 ﻿using System;
+using peepeepoopoo.Interfaces.Currency;
 using peepeepoopoo.Models.Player;
 
 namespace peepeepoopoo.Services.Currency
 {
-    public class CurrencyService : Service
+    public class CurrencyService : Service, ICurrencyService
     {
-        public CurrencyService(int userId) : base(userId)
+        public CurrencyService(int userId) : base(userId) {}
+
+        public void GivePlayerCurrency(Player player, Models.Currency.Currency newCurrency)
         {
+            Player.Currency = newCurrency;
         }
 
-        public void TakePlayerCurrency(Player player, Models.Currency.Currency currency)
+        public bool PlayerHasEnoughCurrency(Player player, Models.Currency.Currency expectedCurrency)
         {
+            return Player.Currency.Amount >= player.Currency.Amount;
         }
 
-        public void GivePlayerCurrency(Player player, Models.Currency.Currency currency)
+        public void TakePlayerCurrency(Player player, Models.Currency.Currency takeCurrency)
         {
-        }
-
-        public void PlayerHasEnoughCurrency(Player player, Models.Currency.Currency currency)
-        {
-        }
-
-        public void ValidateCurrency(Models.Currency.Currency currency)
-        {
+            Player.Currency = takeCurrency;
         }
     }
 }

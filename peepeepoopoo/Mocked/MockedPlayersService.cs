@@ -1,44 +1,59 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using peepeepoopoo.Interfaces.Players;
+using peepeepoopoo.Mocked.Constants;
 using peepeepoopoo.Models.Player;
+using peepeepoopoo.Models.Achievements;
+using peepeepoopoo.Models.Pets;
 
 namespace peepeepoopoo.Mocked
 {
-    public class MockedPlayersService : IPlayersService
+    public class MockedPlayersService : MockedBaseService, IPlayersService
     {
-        public MockedPlayersService()
+        public MockedPlayersService(int userId) : base(userId)
         {
         }
 
         public Level EarnExperience(int amount)
         {
-            throw new NotImplementedException();
+            return Player.Level.EarnExperience(20);
         }
 
         public List<Player> GetAllPlayers(int range)
         {
-            throw new NotImplementedException();
+            return MockedPlayer.GenerateFullPlayers();
+        }
+
+        public List<Achievement> GetMyAchievements()
+        {
+            return AchievementService.GetMyAchievements();
+        }
+
+        public List<Pet> GetMyPets()
+        {
+            var petsService = new MockedPetsService(Player.Id);
+            return petsService.GetMyPets();
         }
 
         public Player GetProfile(int userId)
         {
-            throw new NotImplementedException();
+            return MockedPlayer.GenerateFullPlayers().FirstOrDefault(x => x.Id == userId);
         }
 
         public Player GetProfile(string username)
         {
-            throw new NotImplementedException();
+            return MockedPlayer.GenerateFullPlayers().FirstOrDefault(x => x.Username == username);
         }
 
-        public Player Login(string usernane, string password)
+        public Player Login(string username, string password)
         {
-            throw new NotImplementedException();
+            return MockedPlayer.GenerateFullPlayer(username);
         }
 
         public Player Register(string username, string email, string password)
         {
-            throw new NotImplementedException();
+            return MockedPlayer.GenerateFullPlayer();
         }
     }
 }

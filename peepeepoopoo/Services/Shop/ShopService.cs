@@ -1,28 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using peepeepoopoo.Interfaces.Currency;
 using peepeepoopoo.Interfaces.Shop;
 using peepeepoopoo.Models.Shop;
 
 namespace peepeepoopoo.Services.Shop
 {
-    public class ShopService : Service
+    public class ShopService : Service, IShopService
     {
         public ShopService(int userId) : base(userId) {
         }
 
-        public void GetShopItems()
+        public List<ShopItem> GetShopItems()
         {
+            throw new NotImplementedException();
         }
 
-        public void PurchaseItem(ShopItem item)
+        public ShopItem PurchaseItem(ShopItem item)
         {
+            throw new NotImplementedException();
         }
 
-        public void SellItem(ShopItem item)
+        public ICurrency SellItem(ShopItem item)
         {
+            throw new NotImplementedException();
         }
 
-        public void ValidateCurrency()
+        public bool ValidateCurrency()
         {
+            throw new NotImplementedException();
         }
     }
 }
