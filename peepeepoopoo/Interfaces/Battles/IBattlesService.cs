@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using peepeepoopoo.Models.Battles;
 using peepeepoopoo.Models.Pets;
+using peepeepoopoo.Models.Pets.Creatures;
 
 namespace peepeepoopoo.Interfaces.Battles
 {
