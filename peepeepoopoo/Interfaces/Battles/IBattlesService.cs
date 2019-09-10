@@ -10,6 +10,6 @@ namespace peepeepoopoo.Interfaces.Battles
         List<Battle> GetAvailableBattles();
         Battle EnterBattle(Pet pet, int id);
         Battle CreateBattle(Pet pet1, Pet pet2, int duration, Pet winnerPet);
-        Battle Attack(CreatureAttack attack)
+        Battle Attack(CreatureAttack attack);
     }
 }
