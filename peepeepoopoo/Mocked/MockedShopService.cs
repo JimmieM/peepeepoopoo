@@ -22,7 +22,7 @@ namespace peepeepoopoo.Mocked
             return ShopItems.GetAll();
         }
 
-        public ShopItem PurchaseItem(ShopItem item)
+        public ISellableItem PurchaseItem(ShopItem item)
         {
             var shopItem = item.Item;
 
@@ -34,8 +34,11 @@ namespace peepeepoopoo.Mocked
                     return null;
 
                 var newPet = Pet.ConcreteStarterPet(shopItem as Creature, option.Value.ToString());
-                Player.Pets.Add(newPet);
-            } else if(shopItem is CreatureAttack)
+                PetService.AddPet(Player, newPet);
+                return newPet;
+            }
+
+            if (shopItem is CreatureAttack)
             {
                 var option = ShopItemsHelper.GetAttackPetId(item);
                 if (option == null)
@@ -56,8 +59,8 @@ namespace peepeepoopoo.Mocked
             {
                 Player.Food.Add(shopItem as Food);
             }
-
-            return item;
+            return shopItem;
+            
         }
 
         public ICurrency SellItem(ShopItem item)

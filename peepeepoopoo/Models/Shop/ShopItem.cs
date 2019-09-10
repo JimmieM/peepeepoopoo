@@ -25,26 +25,21 @@ namespace peepeepoopoo.Models.Shop
         public ICurrency Price;
 
         /// <summary>
-        /// Article Number
-        /// </summary>
-        public string ArticleNumber;
-
-        /// <summary>
         ///  Specific ShopItem ID
         /// </summary>
         public int Id;
+
         /// <summary>
-        /// The Item purchased. Creature, Achievement, Food are IShopItem (Is an purchasable item)
+        /// The Item purchased. Creature, Achievement, Food are ISellableItem (Is an purchasable item)
         /// </summary>
-        public IShopItem Item;
+        public ISellableItem Item;
 
         public List<ShopItemOption> ShopItemOptions;
 
         public string Options;
-        public ShopItem(int id, string articleNumber, ICurrency price, IShopItem item)
+        public ShopItem(int id, ICurrency price, ISellableItem item)
         {
             Id = id;
-            ArticleNumber = articleNumber;
             Price = price;
             Item = item;
             ShopItemOptions = new List<ShopItemOption>();
@@ -58,10 +53,9 @@ namespace peepeepoopoo.Models.Shop
             ShopItemOptions.Add(option);
         }
 
-        public ShopItem(int id, string articleNumber, ICurrency price, IShopItem item, List<ShopItemOption> shopItemOptions)
+        public ShopItem(int id, ICurrency price, ISellableItem item, List<ShopItemOption> shopItemOptions)
         {
             Id = id;
-            ArticleNumber = articleNumber;
             Price = price;
             Item = item;
             ShopItemOptions = shopItemOptions;

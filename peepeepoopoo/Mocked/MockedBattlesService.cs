@@ -4,16 +4,20 @@ using peepeepoopoo.Interfaces.Battles;
 using peepeepoopoo.Mocked.Constants;
 using peepeepoopoo.Models.Battles;
 using peepeepoopoo.Models.Pets;
+using peepeepoopoo.Models.Pets.Creatures;
+using peepeepoopoo.Services.Battles;
 
 namespace peepeepoopoo.Mocked
 {
     public class MockedBattlesService : MockedBaseService, IBattlesService
     {
 
-        public List<Battle> MockedBattles;
+        private BattleActionsService ActionsService;
+        private List<Battle> MockedBattles;
 
         public MockedBattlesService(int userId) : base(userId)
         {
+            
             FillMockedBattles();
         }
 
@@ -41,7 +45,7 @@ namespace peepeepoopoo.Mocked
             var battle = MockedBattles.FirstOrDefault(mockedBattle => mockedBattle.Id == id);
             if(battle != null)
             {
-                battle.SecondPet = pet;
+                battle.Join(pet);
             }
             return battle;
         }
@@ -49,6 +53,19 @@ namespace peepeepoopoo.Mocked
         public List<Battle> GetAvailableBattles()
         {
             return MockedBattles;
+        }
+
+        public Battle GetBattle(int id)
+        {
+            return MockedBattles.FirstOrDefault(battle => battle.Id == id);
+        }
+
+        Battle IBattlesService.Attack(int battleId, CreatureAttack attack, Pet damageDealer)
+        {
+            bool procc;
+            ActionsService = new BattleActionsService(GetBattle(battleId), damageDealer);
+            ActionsService.Attack(attack, (didProcc) => procc = didProcc);
+            return Repositories.CurrentBattleRepository.Battle;
         }
     }
 }

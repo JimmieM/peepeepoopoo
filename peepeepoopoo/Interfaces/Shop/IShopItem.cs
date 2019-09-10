@@ -4,6 +4,6 @@ namespace peepeepoopoo.Interfaces.Shop
 {
     public interface IShopItem
     {
-        int ShopItemId { get; }
+        int ShopItemId { get; set; }
     }
 }

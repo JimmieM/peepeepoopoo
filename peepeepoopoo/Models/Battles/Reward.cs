@@ -5,9 +5,9 @@ namespace peepeepoopoo.Models.Battles
 {
     public class Reward
     {
-        IShopItem ShopReward;
+        ISellableItem ShopReward;
         ICurrency Currency;
-        public Reward(IShopItem shopReward)
+        public Reward(ISellableItem shopReward)
         {
             ShopReward = shopReward;
         }

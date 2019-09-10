@@ -5,6 +5,5 @@ namespace peepeepoopoo.Interfaces
 {
     public interface IService
     {
-
     }
 }

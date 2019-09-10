@@ -7,17 +7,11 @@ namespace peepeepoopoo.Controllers.Mocked.Players
 {
     public class MockedLoginController : MockedController
     {
-        private IPlayersService PlayerService;
-        public MockedLoginController()
-        {
-            PlayerService = new MockedPlayersService(USER_ID);
-        }
-
         public Player Login()
         {
             const string username = "Jimmie";
             const string password = "hej123";
-            return PlayerService.Login(username, password);
+            return Repositories.ServicesRepository.PlayerService.Login(username, password);
         }
     }
 }

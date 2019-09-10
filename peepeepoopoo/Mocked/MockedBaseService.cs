@@ -15,23 +15,77 @@ namespace peepeepoopoo.Mocked
     {
         protected Player Player { get; set; }
 
-        public IAchievementsService AchievementService { get; set; }
-        public IBattlesService BattleService { get; set; }
-        public ICurrencyService CurrencyService { get; set; }
-        public IPetsService PetService { get; set; }
-        public IPlayersService PlayerService { get; set; }
-        public IShopService ShopService { get; set; }
+        private int UserId { get; set; }
+
+        private IAchievementsService _achievementService;
+        public IAchievementsService AchievementService
+        {
+            get
+            {
+                if (_achievementService == null)
+                    return new MockedAchievementsService(UserId);
+                return _achievementService;
+            }
+        }
+
+        private IBattlesService _battleService;
+        public IBattlesService BattleService {
+            get
+            {
+                if (_battleService == null)
+                    return new MockedBattlesService(UserId);
+                return _battleService;
+            }
+        }
+
+        private ICurrencyService _currencyService;
+        public ICurrencyService CurrencyService
+        {
+            get
+            {
+                if (_currencyService == null)
+                    return new MockedCurrencyService(UserId);
+                return _currencyService;
+            }
+        }
+
+        private IPetsService _petService;
+        public IPetsService PetService
+        {
+            get
+            {
+                if (_petService == null)
+                    return new MockedPetsService(UserId);
+                return _petService;
+            }
+        }
+
+        private IPlayersService _playerService;
+        public IPlayersService PlayerService
+        {
+            get
+            {
+                if (_playerService == null)
+                    return new MockedPlayersService(UserId);
+                return _playerService;
+            }
+        }
+
+        private IShopService _shopService;
+        public IShopService ShopService
+        {
+            get
+            {
+                if (_shopService == null)
+                    return new MockedShopService(UserId);
+                return _shopService;
+            }
+        }
 
         public MockedBaseService(int userId)
         {
             SetRequesteePlayer(userId);
-
-            AchievementService = new MockedAchievementsService(userId);
-            BattleService = new MockedBattlesService(userId);
-            CurrencyService = new MockedCurrencyService(userId);
-            PetService = new MockedPetsService(userId);
-            PlayerService = new MockedPlayersService(userId);
-            ShopService = new MockedShopService(userId);
+            UserId = userId;
         }
 
         public Player GetRequesteePlayer()

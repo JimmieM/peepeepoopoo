@@ -3,7 +3,7 @@ using peepeepoopoo.Models.Player;
 
 namespace peepeepoopoo.Interfaces.Currency
 {
-    public interface ICurrencyService
+    public interface ICurrencyService : IService
     {
         void TakePlayerCurrency(Player player, Models.Currency.Currency takeCurrency);
         void GivePlayerCurrency(Player player, Models.Currency.Currency newCurrency);

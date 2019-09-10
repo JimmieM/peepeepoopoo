@@ -4,12 +4,17 @@ using peepeepoopoo.Interfaces.Shop;
 
 namespace peepeepoopoo.Models.Pets.Food
 {
-    public class Food : IShopItem
+    public class Food : ISellableItem
     {
         /*
          * IShopItem Implementation
          */
-        public int ShopItemId => throw new NotImplementedException();
+        private int shopItemId;
+        int ISellableItem.ShopItemId
+        {
+            get => shopItemId;
+            set => shopItemId = value;
+        }
 
         /*
          * Food Implementation

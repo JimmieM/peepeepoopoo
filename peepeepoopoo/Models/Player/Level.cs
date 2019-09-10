@@ -1,12 +1,11 @@
 ﻿using System;
 namespace peepeepoopoo.Models.Player
 {
-    public class Level
+    public class Level : Parsable
     {
         public int CurrentLevel;
         public int CurrentExperience;
         public int ExperienceRange;
-
 
         public static Level ConcreteStarterLevel()
         {
@@ -23,6 +22,10 @@ namespace peepeepoopoo.Models.Player
         public Level EarnExperience(int experience)
         {
             CurrentExperience += experience;
+            if(CurrentExperience >= ExperienceRange)
+            {
+                CurrentLevel += 1;
+            }
             return new Level(CurrentLevel, CurrentExperience, ExperienceRange);
         }
 

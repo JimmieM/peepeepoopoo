@@ -14,7 +14,12 @@ namespace peepeepoopoo.Mocked
 
         public List<Achievement> GetAllAchievements()
         {
-            return MockedAchievement.CreateConcreteAchievements();
+            var achievements = MockedAchievement.CreateConcreteAchievements();
+            achievements.ForEach(x => {
+                x.Earned = true;
+                x.DateEarned = DateTime.Now;
+            });
+            return achievements;
         }
 
         public List<Achievement> GetMyAchievements()

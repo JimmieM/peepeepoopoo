@@ -8,15 +8,9 @@ namespace peepeepoopoo.Controllers.Mocked.Players
 {
     public class MockedGetMyPetsController : MockedController
     {
-        private IPetsService PetsService;
-        public MockedGetMyPetsController()
-        {
-            PetsService = new MockedPetsService(USER_ID);
-        }
-
         public List<Pet> GetMyPets()
         {
-            return PetsService.GetMyPets();
+            return Repositories.ServicesRepository.PetService.GetMyPets();
         }
     }
 }

@@ -46,5 +46,20 @@ namespace peepeepoopoo.Services.Pets
         {
             throw new NotImplementedException();
         }
+
+        public bool AddPet(Player player, Pet pet)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool AddAttack(Pet pet, CreatureAttack attack)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Pet CreatePet(string name, Player owner)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

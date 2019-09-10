@@ -16,7 +16,7 @@ namespace peepeepoopoo.Services.Shop
             throw new NotImplementedException();
         }
 
-        public ShopItem PurchaseItem(ShopItem item)
+        public ISellableItem PurchaseItem(ShopItem item)
         {
             throw new NotImplementedException();
         }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using peepeepoopoo.Models.Player;
+
 namespace peepeepoopoo.Models.Friends
 {
-    public class Friendship
+    public class Friendship : Parsable
     {
         public int Id;
         public DateTime FriendshipSince;

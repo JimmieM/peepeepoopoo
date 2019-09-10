@@ -14,11 +14,11 @@ namespace peepeepoopoo.Interfaces
         void SetRequesteePlayer(int userId);
         Player GetRequesteePlayer();
 
-        IAchievementsService AchievementService { get; set; }
-        IBattlesService BattleService { get; set; }
-        ICurrencyService CurrencyService { get; set; }
-        IPetsService PetService { get; set; }
-        IPlayersService PlayerService { get; set; }
-        IShopService ShopService { get; set; }
+        //IAchievementsService AchievementService { get; }
+        //IBattlesService BattleService { get; }
+        //ICurrencyService CurrencyService { get; }
+        //IPetsService PetService { get; }
+        //IPlayersService PlayerService { get; }
+        //IShopService ShopService { get; }
     }
 }

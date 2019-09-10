@@ -1,11 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using peepeepoopoo.Interfaces.Shop;
 using peepeepoopoo.Models.Statistics;
 
 namespace peepeepoopoo.Models.Pets
 {
-    public class Pet
+    public class Pet : ISellableItem
     {
+        /**
+         * IShopItem Implementation
+         */
+        private int shopItemId;
+        int ISellableItem.ShopItemId
+        {
+            get => shopItemId;
+            set => shopItemId = value;
+        }
+
+        /**
+         * Pet 
+         */
         public int Id;
 
         public Player.Player Player1;

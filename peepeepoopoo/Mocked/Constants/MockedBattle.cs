@@ -29,7 +29,7 @@ namespace peepeepoopoo.Mocked.Constants
         /// <param name="duration"></param>
         /// <param name="winnerPet"></param>
         /// <returns></returns>
-        public static Battle CreateBattle(Pet pet1, Pet pet2, int duration, Pet winnerPet)
+        public static Battle CreateBattle(Pet pet1, Pet pet2, int duration, Pet winnerPet, BattleType battleType = BattleType.PVP)
         {
             var id = GenerateId(999);
 
@@ -37,8 +37,6 @@ namespace peepeepoopoo.Mocked.Constants
             //var achievement = new Achievement(); // TODO, Implement constant for achievements!
 
             var reward = new Reward(currency);
-
-            var battleType = new PVP();
 
             var startDate = DateTime.Now;
 

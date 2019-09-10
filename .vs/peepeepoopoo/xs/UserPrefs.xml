@@ -1,26 +1,37 @@
-﻿<Properties StartupConfiguration="{969ABB8A-4E6E-4710-877D-3A4A94BE606B}|Default">
+﻿<Properties StartupConfiguration="{9455D1FF-FF4C-4940-967D-F39990DB7DC6}|Default">
   <MonoDevelop.Ide.ItemProperties.peepeepoopoo PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="peepeepoopoo/Mocked/MockedPlayersService.cs">
+  <MonoDevelop.Ide.ItemProperties.PeepeepoopooConsoleGame FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="peepeepoopoo/Services/Battles/BattleCalculatorService.cs">
     <Files>
-      <File FileName="peepeepoopoo/Interfaces/Battles/IBattlesService.cs" Line="12" Column="78" />
-      <File FileName="peepeepoopoo/Interfaces/Currency/ICurrencyService.cs" Line="3" Column="1" />
-      <File FileName="peepeepoopoo/Interfaces/Pets/IPetsService.cs" Line="13" Column="1" />
-      <File FileName="peepeepoopoo/Interfaces/Shop/IShopService.cs" Line="15" Column="2" />
-      <File FileName="peepeepoopoo/Interfaces/Players/IPlayersService.cs" Line="18" Column="31" />
-      <File FileName="peepeepoopoo/Models/Player/Player.cs" Line="28" Column="32" />
-      <File FileName="peepeepoopoo/Controllers/Mocked/Shop/MockedPurchaseItem.cs" Line="27" Column="1" />
-      <File FileName="TestConsole/Program.cs" Line="2" Column="39" />
-      <File FileName="peepeepoopoo/Mocked/MockedPetsService.cs" Line="24" Column="1" />
-      <File FileName="peepeepoopoo/Services/Achievements/AchievementsService.cs" Line="6" Column="1" NotebookId="1" />
-      <File FileName="peepeepoopoo/Interfaces/Achievements/IAchievementsService.cs" Line="10" Column="33" NotebookId="1" />
-      <File FileName="peepeepoopoo/Mocked/MockedAchievementsService.cs" Line="22" Column="26" NotebookId="1" />
-      <File FileName="peepeepoopoo/Settings/Database/MySQL.cs" Line="6" Column="2" NotebookId="1" />
-      <File FileName="peepeepoopoo/Models/Achievements/Achievement.cs" Line="25" Column="16" NotebookId="1" />
-      <File FileName="peepeepoopoo/Mocked/MockedPlayersService.cs" Line="25" Column="32" NotebookId="1" />
-      <File FileName="peepeepoopoo/Services/Service.cs" Line="48" Column="10" NotebookId="1" />
-      <File FileName="peepeepoopoo/Helpers/ShopItemTranslator.cs" Line="7" Column="40" NotebookId="1" />
-      <File FileName="peepeepoopoo/Models/Pets/Pet.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="peepeepoopoo/Constants/Creatures/Attacks/CreatureAttacks.cs" Line="13" Column="15" NotebookId="1" />
+      <File FileName="peepeepoopoo/Controllers/Mocked/Battles/MockedCreateBattleController.cs" Line="10" Column="13" />
+      <File FileName="peepeepoopoo/Controllers/Mocked/MockedController.cs" />
+      <File FileName="peepeepoopoo/Controllers/Mocked/Battles/MockedEnterBattleController.cs" />
+      <File FileName="peepeepoopoo/Controllers/Mocked/Players/MockedGetMyAchievementsController.cs" />
+      <File FileName="peepeepoopoo/Controllers/Mocked/Players/MockedGetMyPetsController.cs" />
+      <File FileName="PeepeepoopooConsoleGame/Static Screens/Player/PlayerScreen.cs" />
+      <File FileName="TestConsole/Program.cs" />
+      <File FileName="peepeepoopoo/Models/Parsable.cs" />
+      <File FileName="peepeepoopoo/Services/Battles/BattlesService.cs" />
+      <File FileName="peepeepoopoo/Constants/Creatures/Attacks/CreatureAttacks.cs" />
+      <File FileName="peepeepoopoo/Models/Pets/Creatures/CreatureAttack.cs" />
+      <File FileName="peepeepoopoo/Types/Percentage.cs" />
+      <File FileName="peepeepoopoo/Mocked/MockedBattlesService.cs" />
+      <File FileName="peepeepoopoo/Services/Battles/BattleCalculatorService.cs" Line="23" Column="30" />
+      <File FileName="peepeepoopoo/Handlers/Achievements/AchievementHandler.cs" Line="9" Column="6" NotebookId="1" />
+      <File FileName="peepeepoopoo/Interfaces/IService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Interfaces/Battles/IBattlesService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Interfaces/Achievements/IAchievementsService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Interfaces/Currency/ICurrencyService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Settings/Settings.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Repositories/ServicesRepository.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Mocked/MockedAchievementsService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Mocked/MockedPetsService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Services/Pets/PetsService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Mocked/MockedBaseService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Constants/Shop/ShopItems.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Models/Pets/Creatures/Creature.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Services/Battles/BattleActionsService.cs" NotebookId="1" />
+      <File FileName="peepeepoopoo/Repositories/CurrentBattleRepository.cs" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,46 +39,33 @@
           <Node name="peepeepoopoo" expanded="True">
             <Node name="peepeepoopoo" expanded="True">
               <Node name="Constants" expanded="True">
-                <Node name="Achievements" expanded="True" />
                 <Node name="Creatures" expanded="True">
                   <Node name="Attacks" expanded="True" />
                 </Node>
-                <Node name="Shop" expanded="True" />
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="Mocked" expanded="True">
-                  <Node name="Players" expanded="True" />
-                  <Node name="Shop" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Helpers" expanded="True" />
               <Node name="Interfaces" expanded="True">
-                <Node name="Pets" expanded="True" />
-                <Node name="Shop" expanded="True" />
-              </Node>
-              <Node name="Mocked" expanded="True">
-                <Node name="Constants" expanded="True" />
-                <Node name="MockedPlayersService.cs" selected="True" />
-              </Node>
-              <Node name="Models" expanded="True">
-                <Node name="Achievements" expanded="True" />
-                <Node name="Currency" expanded="True" />
-                <Node name="Pets" expanded="True">
-                  <Node name="Food" expanded="True" />
-                </Node>
-                <Node name="Player" expanded="True" />
-                <Node name="Shop" expanded="True" />
-              </Node>
-              <Node name="Services" expanded="True">
-                <Node name="Achievements" expanded="True" />
                 <Node name="Battles" expanded="True" />
-                <Node name="Currency" expanded="True" />
-                <Node name="Pets" expanded="True" />
-                <Node name="Players" expanded="True" />
-                <Node name="Shop" expanded="True" />
               </Node>
-              <Node name="Settings" expanded="True">
-                <Node name="Database" expanded="True" />
+              <Node name="Mocked" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="Battles" expanded="True">
+                  <Node name="BattleCalculatorService.cs" selected="True" />
+                </Node>
+                <Node name="Players" expanded="True" />
+              </Node>
+              <Node name="Types" expanded="True" />
+            </Node>
+            <Node name="PeepeepoopooConsoleGame" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Static Screens" expanded="True">
+                <Node name="Player" expanded="True" />
+              </Node>
+              <Node name="Story" expanded="True">
+                <Node name="Battle" expanded="True" />
+                <Node name="Intro" expanded="True" />
               </Node>
             </Node>
             <Node name="TestConsole" expanded="True" />
@@ -77,9 +75,14 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TestConsole PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/TestConsole/Program.cs" relfile="TestConsole/Program.cs" line="84" column="1" />
+      <Breakpoint file="/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/TestConsole/Program.cs" relfile="TestConsole/Program.cs" line="73" column="1" />
+      <Breakpoint file="/Users/jimmiemagnusson/Dropbox/Appar/peepeepoopoo/TestConsole/Program.cs" relfile="TestConsole/Program.cs" line="50" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

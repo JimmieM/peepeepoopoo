@@ -1,13 +1,20 @@
 ﻿using System.Collections.Generic;
 using peepeepoopoo.Interfaces.Shop;
+using peepeepoopoo.Types;
+using static peepeepoopoo.Constants.Creatures.Creatures;
 
 namespace peepeepoopoo.Models.Pets.Creatures { 
-    public class CreatureAttack : IShopItem
+    public class CreatureAttack : ISellableItem
     {
         /*
          * IShopItem Implementation
         */
-        public int ShopItemId => 210;
+        private int shopItemId;
+        int ISellableItem.ShopItemId
+        {
+            get => shopItemId;
+            set => shopItemId = value;
+        }
 
         public int Id;
         public string Name;
@@ -22,11 +29,11 @@ namespace peepeepoopoo.Models.Pets.Creatures {
 
         public string Description;
 
-        public int ProccPerBattle;
+        public int ProccPerBattlePercentage;
 
         public string Image;
 
-        public List<Creature> Availability;
+        public List<CreatureTypes> Availability;
 
         public CreatureAttack(
             int id,
@@ -39,7 +46,7 @@ namespace peepeepoopoo.Models.Pets.Creatures {
             string description,
             int proccPerBattle,
             string image,
-            List<Creature> availability)
+            List<CreatureTypes> availability)
         {
             Id = id;
             Name = name;
@@ -49,7 +56,7 @@ namespace peepeepoopoo.Models.Pets.Creatures {
             Damage = damage;
             Protection = protection;
             Description = description;
-            ProccPerBattle = proccPerBattle;
+            ProccPerBattlePercentage = proccPerBattle;
             Image = image;
             Availability = availability;
         }

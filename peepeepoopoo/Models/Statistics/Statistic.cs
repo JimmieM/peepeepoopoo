@@ -1,16 +1,23 @@
 ﻿using System;
 namespace peepeepoopoo.Models.Statistics
 {
-    public class Statistic
+    public class Statistic : Parsable
     {
-        public int Value;
+        public int Value {
+            set
+            {
+                PreviousValue = Value;
+                Value = value;
+            }
+            get
+            {
+                return Value;
+            }
+        }
+
         public int PreviousValue;
 
         public bool IsPrimaryStat;
-
-        public int LowestValuePossible;
-
-        public int HighestValuePossible;
 
 
         public Statistic(int previousValue)
@@ -24,6 +31,20 @@ namespace peepeepoopoo.Models.Statistics
             PreviousValue = previousValue;
         }
 
-        
+        public bool StatIsAverage()
+        {
+            return Value > 40 && Value < 60;
+        }
+
+        public bool StatIsAboveAverage()
+        {
+            return Value > 64;
+        }
+
+
+        public bool StaticIsBelowAverage()
+        {
+            return Value < 37;
+        }
     }
 }

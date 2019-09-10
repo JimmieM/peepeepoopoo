@@ -9,9 +9,7 @@ namespace peepeepoopoo.Mocked.Constants
     {
         public static Achievement CreateConcreteAchievement()
         {
-            var allAchievements = Achievements.GetAllAchievements();
-            var randomAchievementIndex = GenerateId(allAchievements.Count - 1);
-            return allAchievements[randomAchievementIndex];
+            return Achievements.GetAllAchievements()[GenerateId(Achievements.GetAllAchievements().Count - 1)];
         }
 
         public static List<Achievement> CreateConcreteAchievements()

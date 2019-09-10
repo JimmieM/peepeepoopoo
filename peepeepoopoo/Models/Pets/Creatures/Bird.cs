@@ -3,18 +3,15 @@ using peepeepoopoo.Constants.Shop;
 using peepeepoopoo.Constants.Creatures.Food;
 using peepeepoopoo.Interfaces.Pets.Creatures;
 using System.Collections.Generic;
+using static peepeepoopoo.Constants.Creatures.Creatures;
+using peepeepoopoo.Constants.Creatures;
 
 namespace peepeepoopoo.Models.Pets.Creatures
 {
-    public class Bird : Creature, ICreature
+    public class Bird : Creature
     {
-        int ICreature.Stages => 3;
-
-        public List<Food.Food> PrefferedFood => FoodTypes.GetFoodTypes() ;
-
-        public Bird() 
+        public Bird() : base(CreatureTypes.Bird, 1)
         {
-            
         }
     }
 }

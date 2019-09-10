@@ -9,7 +9,9 @@ namespace peepeepoopoo.Constants.Creatures.Food
             return new List<Models.Pets.Food.Food>
             {
                 new Models.Pets.Food.Food(1, "Carrot", 20, 20, 20, 20),
-                new Models.Pets.Food.Food(2, "Cooked Chicken", 20, 20, 20, 20)
+                new Models.Pets.Food.Food(2, "Cooked Chicken", 20, 20, 20, 20),
+                new Models.Pets.Food.Food(3, "Cooked Beef", 20, 20, 20, 20)
+
             };
         }
     }

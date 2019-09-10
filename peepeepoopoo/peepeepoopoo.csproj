@@ -54,10 +54,16 @@
     <Folder Include="Interfaces\Players\" />
     <Folder Include="Controllers\Mocked\Shop\" />
     <Folder Include="Controllers\Mocked\Players\" />
+    <Folder Include="Controllers\Mocked\Battles\" />
+    <Folder Include="Controllers\Mocked\Pets\" />
+    <Folder Include="Handlers\Experience\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Types\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
     <PackageReference Include="MySql.Data" Version="8.0.17" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\Shop\Item.cs" />
@@ -66,5 +72,8 @@
     <Compile Remove="Mocked\Constants\MockedPlayer %28Konfliktkopia för JimmieKnowit.local 2019-08-28%29.cs" />
     <Compile Remove="Models\Achievements\Achievement %28Konfliktkopia för Jimmies-MacBook-Pro.local 2019-08-20%29.cs" />
     <Compile Remove="Mocked\Constants\MockedPlayer %28Konfliktkopia för JimmieKnowit.local 2019-08-28%29.cs" />
+    <Compile Remove="Interfaces\Shop\IShopItem.cs" />
+    <Compile Remove="Handlers\IPlayerService.cs" />
+    <Compile Remove="Handlers\Handler.cs" />
   </ItemGroup>
 </Project>

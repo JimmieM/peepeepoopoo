@@ -5,6 +5,11 @@ using peepeepoopoo.Models.Pets;
 
 namespace peepeepoopoo.Models.Battles
 {
+    public enum BattleType
+    {
+        PVP,PVE
+    }
+    
     public class Battle
     {
         public int Id;
@@ -22,14 +27,14 @@ namespace peepeepoopoo.Models.Battles
 
         public Pet WinnerPet;
 
-        public IBattleType Type;
+        public BattleType Type;
 
         public Battle(
             int id,
             Pet pet1,
             Pet pet2,
             Reward reward,
-            IBattleType type,
+            BattleType type,
             DateTime startDate,
             DateTime endDate,
             Pet winnerPet)
@@ -49,7 +54,7 @@ namespace peepeepoopoo.Models.Battles
             Pet pet1,
             Pet pet2,
             Reward reward,
-            IBattleType type,
+            BattleType type,
             DateTime startDate,
             DateTime endDate)
         {
@@ -60,6 +65,16 @@ namespace peepeepoopoo.Models.Battles
             Type = type;
             StartDate = startDate;
             EndDate = endDate;
+        }
+
+        public bool Join(Pet pet)
+        {
+            if(SecondPet == null)
+            {
+                SecondPet = pet;
+                return true;
+            }
+            return false;
         }
     }
 }

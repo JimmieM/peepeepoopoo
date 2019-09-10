@@ -7,11 +7,21 @@ namespace peepeepoopoo.Constants.Creatures
 {
     public static class Creatures
     {
-        public static List<Creature> GetCreatures()
+
+        public enum CreatureTypes {
+            Fox, Pig, Bird, RedPanda, Squirell, Turtle
+        }
+
+        public static Dictionary<CreatureTypes, Creature> GetCreatures()
         {
-            return new List<Creature>
+            return new Dictionary<CreatureTypes, Creature>
             {
-                new Bird()
+                { CreatureTypes.Fox, new Bird() },
+                { CreatureTypes.Fox, new Fox() },
+                { CreatureTypes.Pig, new Pig() },
+                { CreatureTypes.RedPanda, new RedPanda() },
+                { CreatureTypes.Squirell, new Squirell() },
+                { CreatureTypes.Turtle, new Turtle() }
             };
         }
     }

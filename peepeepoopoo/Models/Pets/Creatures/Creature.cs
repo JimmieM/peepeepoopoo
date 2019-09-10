@@ -1,24 +1,41 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using peepeepoopoo.Models.Pets.Food;
 using peepeepoopoo.Models.Pets.Creatures;
 using peepeepoopoo.Interfaces.Shop;
-using peepeepoopoo.Interfaces.Currency;
+using peepeepoopoo.Constants.Creatures.Attacks;
+using static peepeepoopoo.Constants.Creatures.Creatures;
 
 namespace peepeepoopoo.Models.Pets
 {
-    public class Creature : IShopItem
+    public class Creature : ISellableItem
     {
-        public Creature()
+        /// <summary>
+        /// Set the creatureType and amount of Stages.
+        /// </summary>
+        /// <param name="creatureType">creatureType</param>
+        /// <param name="stages">stages</param>
+        public Creature(CreatureTypes creatureType, int stages)
         {
+            CreatureType = creatureType;
+            Stages = stages;
+        }
+        /**
+         * Creature Overridables
+         */
+        protected CreatureTypes CreatureType;
+        protected int Stages;
+
+
+        private int shopItemId;
+        int ISellableItem.ShopItemId
+        {
+            get => shopItemId;
+            set => shopItemId = value;
         }
 
-        public int ShopItemId => 10;
-
-
-        //public List<CreatureAttack> GetAvailableAttacks(Creature creature)
-        //{
-        //    return CreatureAttacks.Get().Where(attack => attack.Availability.Select(findByCreature => findByCreature.GetType().Equals(creature.GetType()));
-        //}
+        public List<CreatureAttack> GetAvailableAttacksAsCreature()
+        {                
+            return (List<CreatureAttack>)CreatureAttacks.GetAttacks().Where(attack => attack.Availability.Contains(CreatureType));
+        }
     }
 }
